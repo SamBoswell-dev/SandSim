@@ -1,11 +1,11 @@
-workspace "RaylibTemplate"
+workspace "SandSim"
 	architecture "x86"
 	configurations { "Debug", "Release"}
 	
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"	
 	
-project "RaylibTemplate"
-	location "RaylibTemplate"
+project "SandSim"
+	location "SandSim"
 	kind "ConsoleApp"
 	language "C++"
 	

@@ -11,10 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4428D5AA-30F6-C8B0-198A-39D705F7A415}</ProjectGuid>
+    <ProjectGuid>{548124E3-C060-A37E-C978-2E5535D709E0}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>RaylibTemplate</RootNamespace>
+    <RootNamespace>SandSim</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -42,16 +42,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86\RaylibTemplate\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86\RaylibTemplate\</IntDir>
-    <TargetName>RaylibTemplate</TargetName>
+    <OutDir>..\bin\Debug-windows-x86\SandSim\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86\SandSim\</IntDir>
+    <TargetName>SandSim</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86\RaylibTemplate\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86\RaylibTemplate\</IntDir>
-    <TargetName>RaylibTemplate</TargetName>
+    <OutDir>..\bin\Release-windows-x86\SandSim\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86\SandSim\</IntDir>
+    <TargetName>SandSim</TargetName>
     <TargetExt>.exe</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -95,11 +95,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Ball.h" />
+    <ClCompile Include="src\Grid.cpp" />
+    <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Ball.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClInclude Include="src\Globals.h" />
+    <ClInclude Include="src\Grid.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
