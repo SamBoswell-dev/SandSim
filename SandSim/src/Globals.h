@@ -5,6 +5,9 @@
 //#     and height ratio. Stack Overflow is possible               #
 //##################################################################
 
+// NOTE: We could change to storing the grid on the heap.
+// This would solve the Stack Overflow issue.
+
 #define CELL_SIZE		20
 #define WINDOW_WIDTH	800
 #define WINDOW_HEIGHT	600

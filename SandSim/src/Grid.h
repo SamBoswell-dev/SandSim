@@ -1,11 +1,12 @@
 #pragma once
 #include "Globals.h"
 #include "raylib.h"
+#include "SandParticle.h"
 
 class Grid
 {
 public:
-	char cells[ROWS][COLUMNS];
+	Particle cells[ROWS][COLUMNS];
 private:
 	const Color m_gridColor;
 public:
