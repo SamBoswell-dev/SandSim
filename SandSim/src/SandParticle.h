@@ -10,6 +10,6 @@ private:
 public:
 	SandParticle();
 private:
-
+	Color GenerateRandomColor();
 };
 

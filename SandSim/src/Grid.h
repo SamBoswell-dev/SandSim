@@ -1,15 +1,16 @@
 #pragma once
 #include "Globals.h"
 #include "raylib.h"
-#include "SandParticle.h"
+#include "Particle.h"
+#include <vector>
 
 class Grid
 {
 public:
-	Particle cells[ROWS][COLUMNS];
+	std::vector<std::vector<Particle>> cells;
 private:
 	const Color m_gridColor;
-public:
+public: 
 	Grid();
 	void Draw();
 private:
