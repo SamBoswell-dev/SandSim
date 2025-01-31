@@ -1,6 +1,7 @@
 #include "Grid.h"
 #include "AirParticle.h"
 #include "SandParticle.h"
+#include <iostream>
 
 
 Grid::Grid()
@@ -29,4 +30,18 @@ void Grid::Draw()
 			DrawRectangle(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1, cells[i][j].color);
 		}
 	}
+}
+
+void Grid::AddParticle(int row, int column, Particle& particle)
+{
+	if ((row >= 0 && row < ROWS) && (column >= 0 && column < COLUMNS))
+	{
+		cells[row][column] = particle;
+	}
+}
+
+void Grid::RemoveParticle(int row, int column)
+{
+	if ((row >= 0 && row < ROWS) && (column >= 0 && column < COLUMNS))
+		cells[row][column] = AirParticle();
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "raylib.h"
 #include "Globals.h"
-#include "Grid.h"
+#include "Simulation.h"
 
 int main()
 {
@@ -11,7 +11,7 @@ int main()
 	SetTargetFPS(120);
 	
 
-	Grid grid = Grid();
+	Simulation simulation = Simulation();
 	while (!WindowShouldClose())
 	{
 
@@ -19,7 +19,7 @@ int main()
 		BeginDrawing();
 		ClearBackground(backgroundColor);
 
-		grid.Draw();
+		simulation.Draw();
 
 		EndDrawing();
 	}

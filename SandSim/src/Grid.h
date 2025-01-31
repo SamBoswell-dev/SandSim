@@ -13,6 +13,8 @@ private:
 public: 
 	Grid();
 	void Draw();
+	void AddParticle(int row, int column, Particle& particle);
+	void RemoveParticle(int row, int column);
 private:
 
 };

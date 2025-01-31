@@ -95,6 +95,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Simulation.cpp" />
     <ClCompile Include="src\AirParticle.cpp" />
     <ClCompile Include="src\Particle.cpp" />
     <ClCompile Include="src\SandParticle.cpp" />
@@ -102,6 +103,7 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Simulation.h" />
     <ClInclude Include="src\AirParticle.h" />
     <ClInclude Include="src\Particle.h" />
     <ClInclude Include="src\SandParticle.h" />
