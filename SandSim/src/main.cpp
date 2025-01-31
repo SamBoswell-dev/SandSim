@@ -14,8 +14,17 @@ int main()
 	Simulation simulation = Simulation();
 	while (!WindowShouldClose())
 	{
+		// Handle input
+		if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))
+		{
+			int mouseX = GetMouseX() / CELL_SIZE;
+			int mouseY = GetMouseY() / CELL_SIZE;
 
-		
+			simulation.AddParticle(mouseY, mouseX);
+		}
+
+		simulation.Update();
+
 		BeginDrawing();
 		ClearBackground(backgroundColor);
 

@@ -25,3 +25,8 @@ Color SandParticle::GenerateRandomColor()
 	return { r, g, b, 255 };
 
 }
+
+//void SandParticle::HandleMovement()
+//{
+//	if ()
+//}

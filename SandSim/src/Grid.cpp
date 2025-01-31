@@ -16,7 +16,11 @@ Grid::Grid()
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)
+		{
 			cells[i][j] = std::move(AirParticle());
+			cells[i][j].position.y = i;
+			cells[i][j].position.x = j;
+		}
 	}
 
 }
@@ -37,6 +41,9 @@ void Grid::AddParticle(int row, int column, Particle& particle)
 	if ((row >= 0 && row < ROWS) && (column >= 0 && column < COLUMNS))
 	{
 		cells[row][column] = particle;
+		particle.position.y = row;
+		particle.position.x = column;
+		std::cout << "Added cell position: " << particle.position.y << ", " << particle.position.x << std::endl;
 	}
 }
 
