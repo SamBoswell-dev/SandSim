@@ -3,17 +3,18 @@
 #include "raylib.h"
 #include "Particle.h"
 #include <vector>
+#include <memory>
 
 class Grid
 {
 public:
-	std::vector<std::vector<Particle>> cells;
+	std::vector<std::vector<std::unique_ptr<Particle>>> cells;
 private:
 	const Color m_gridColor;
 public: 
 	Grid();
 	void Draw();
-	void AddParticle(int row, int column, Particle& particle);
+	void AddParticle(int row, int column, std::unique_ptr<Particle> particle);
 	void RemoveParticle(int row, int column);
 private:
 

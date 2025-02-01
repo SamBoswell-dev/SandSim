@@ -1,10 +1,11 @@
 #include "SandParticle.h"
+#include "Grid.h"
 #include <random>
+#include <iostream>
 
-SandParticle::SandParticle() 
+SandParticle::SandParticle(Grid& grid)
+	: Particle(grid)
 {
-
-	// TODO: Add semi-random color generation for each instance
 	color = GenerateRandomColor();
 }
 
@@ -26,7 +27,7 @@ Color SandParticle::GenerateRandomColor()
 
 }
 
-//void SandParticle::HandleMovement()
-//{
-//	if ()
-//}
+void SandParticle::HandleMovement()
+{
+	std::cout << grid.cells[1][5]->color.r << grid.cells[1][5]->color.g << grid.cells[1][5]->color.b << std::endl;
+}

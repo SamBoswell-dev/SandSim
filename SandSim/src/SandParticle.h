@@ -6,10 +6,10 @@ class SandParticle : public Particle
 public:
 
 private:
-
+	
 public:
-	SandParticle();
-	//void HandleMovement() override;
+	SandParticle(Grid& grid);
+	void HandleMovement() override;
 private:
 	Color GenerateRandomColor();
 };

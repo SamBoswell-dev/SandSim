@@ -1,6 +1,7 @@
 #include "Simulation.h"
 #include "AirParticle.h"
 #include "SandParticle.h"
+#include <memory>
 
 Simulation::Simulation() 
 	: grid(Grid())
@@ -16,7 +17,7 @@ void Simulation::Draw()
 void Simulation::AddParticle(int row, int column)
 {
 	if ((row >= 0 && row < ROWS) && (column >= 0 && column < COLUMNS))
-		grid.AddParticle(row, column, SandParticle());
+		grid.AddParticle(row, column, std::make_unique<SandParticle>(grid));
 }
 
 void Simulation::Update()
@@ -26,7 +27,7 @@ void Simulation::Update()
 	{
 		for (int j = 0; j < grid.cells[i].size(); j++)
 		{
-			grid.cells[i][j].HandleMovement();
+			grid.cells[i][j]->HandleMovement();
 		}
 	}
 
