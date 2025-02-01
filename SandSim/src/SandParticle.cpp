@@ -1,4 +1,5 @@
 #include "SandParticle.h"
+#include "AirParticle.h"
 #include "Grid.h"
 #include <random>
 #include <iostream>
@@ -6,6 +7,7 @@
 SandParticle::SandParticle(Grid& grid)
 	: Particle(grid)
 {
+	type = Sand;
 	color = GenerateRandomColor();
 }
 
@@ -29,5 +31,18 @@ Color SandParticle::GenerateRandomColor()
 
 void SandParticle::HandleMovement()
 {
-	std::cout << grid.cells[1][5]->color.r << grid.cells[1][5]->color.g << grid.cells[1][5]->color.b << std::endl;
+	// check if air is on the ground
+	if (position.y == ROWS - 1)
+		return;
+
+	// check if air is below
+	if (grid.cells[position.y + 1][position.x]->type == Air)
+	{
+		// move this instance down a row in the vector
+		grid.cells[position.y + 1][position.x] = std::move(grid.cells[position.y][position.x]);
+		// Create air particle where we previously were
+		grid.cells[position.y][position.x] = std::make_unique<AirParticle>();
+		position.y += 1;
+		return;
+	}
 }
