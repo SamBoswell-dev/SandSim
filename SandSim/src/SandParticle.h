@@ -12,5 +12,6 @@ public:
 	void HandleMovement() override;
 private:
 	Color GenerateRandomColor();
+	int GetRandomDirection();
 };
 

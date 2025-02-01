@@ -43,7 +43,7 @@ void Grid::AddParticle(int row, int column, std::unique_ptr<Particle> particle)
 		cells[row][column] = std::move(particle);
 		cells[row][column]->position.y = row;
 		cells[row][column]->position.x = column;
-		std::cout << "Added cell position: " << cells[row][column]->position.y << ", " << cells[row][column]->position.x << std::endl;
+		//std::cout << "Added cell position: " << cells[row][column]->position.y << ", " << cells[row][column]->position.x << std::endl;
 	}
 }
 
