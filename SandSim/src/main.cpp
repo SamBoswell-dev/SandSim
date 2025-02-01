@@ -29,6 +29,7 @@ int main()
 		ClearBackground(backgroundColor);
 
 		simulation.Draw();
+		DrawFPS(10, 10);
 
 		EndDrawing();
 	}

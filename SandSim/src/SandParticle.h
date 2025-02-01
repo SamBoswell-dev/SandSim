@@ -9,6 +9,7 @@ private:
 	
 public:
 	SandParticle(Grid& grid);
+	SandParticle(const SandParticle& other);
 	void HandleMovement() override;
 private:
 	Color GenerateRandomColor();

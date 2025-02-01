@@ -34,6 +34,8 @@ void Grid::Draw()
 			DrawRectangle(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE - 1, CELL_SIZE - 1, cells[i][j]->color);
 		}
 	}
+
+	//std::cout << "Copy count: " << Particle::copyCount << std::endl;
 }
 
 void Grid::AddParticle(int row, int column, std::unique_ptr<Particle> particle)

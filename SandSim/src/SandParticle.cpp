@@ -4,11 +4,18 @@
 #include <random>
 #include <iostream>
 
+
 SandParticle::SandParticle(Grid& grid)
 	: Particle(grid)
 {
 	type = Sand;
 	color = GenerateRandomColor();
+}
+
+SandParticle::SandParticle(const SandParticle& other)
+	: Particle(other)
+{
+	
 }
 
 Color SandParticle::GenerateRandomColor()

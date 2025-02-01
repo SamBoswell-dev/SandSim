@@ -5,6 +5,7 @@ class AirParticle : public Particle
 {
 public:
 	AirParticle();
+	AirParticle(const AirParticle& other);
 private:
 
 };
